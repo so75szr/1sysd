@@ -1,6 +1,6 @@
 .PHONY: all clean
 
-PROGS=ok_boomer limites boomer_bsd
+PROGS=ok_boomer limites boomer_bsd game
 
 CC=gcc
 CFLAGS=
