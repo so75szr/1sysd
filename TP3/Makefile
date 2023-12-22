@@ -6,7 +6,7 @@ CFLAGS=
 
 all: $(PROGS)
 
-%: %.c
+%: %.py
 	$(CC) $(CFLAGS) -o $@ $< 
 
 %.s: %.c
