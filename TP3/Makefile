@@ -12,6 +12,8 @@ all: $(PROGS)
 %.s: %.c
 	$(CC) -S $< 
 
+%: %.c
+	 $(CC) $(CFLAGS) -o $@ $<
 clean:
 	rm -f $(PROGS) *.s
 
