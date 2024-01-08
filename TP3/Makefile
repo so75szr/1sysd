@@ -1,6 +1,6 @@
 .PHONY: all clean
 
-PROGS=game
+PROGS=game sum
 CC=gcc
 CFLAGS=
 
