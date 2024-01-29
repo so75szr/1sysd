@@ -1,31 +1,37 @@
 #include <stdio.h>
 
 float celsius2fahrenheit(float celsius) {
-    return (9.0/5.0) * celsius + 32;
+    return (9.0 / 5.0) * celsius + 32;
 }
 
 float fahrenheit2celsius(float fahrenheit) {
-    return (fahrenheit - 32) * 5.0/9.0;
+    return (fahrenheit - 32) * 5.0 / 9.0;
 }
 
 int main() {
-    char choice;
-    float temperature;
+    char choix;
+    float temperature, resultat;
 
-    printf("Saisissez 1 pour convertir de Celsius à Fahrenheit ou 2 pour convertir de Fahrenheit à Celsius : ");
-    scanf(" %c", &choice);
+    printf("Choisissez la conversion :\n");
+    printf("1. Celsius vers Fahrenheit\n");
+    printf("2. Fahrenheit vers Celsius\n");
+    scanf(" %c", &choix);
+
     printf("Saisissez la température : ");
     scanf("%f", &temperature);
 
-    switch (choice) {
+    switch (choix) {
         case '1':
-            printf("%.2f°C équivaut à %.2f°F\n", temperature, celsius2fahrenheit(temperature));
+            resultat = celsius2fahrenheit(temperature);
+            printf("%.2f Celsius équivaut à %.2f Fahrenheit\n", temperature, resultat);
             break;
         case '2':
-            printf("%.2f°F équivaut à %.2f°C\n", temperature, fahrenheit2celsius(temperature));
+            resultat = fahrenheit2celsius(temperature);
+            printf("%.2f Fahrenheit équivaut à %.2f Celsius\n", temperature, resultat);
             break;
         default:
-            printf("Choix invalide\n");
+            printf("Choix invalide.\n");
+            return 1;
     }
 
     return 0;
